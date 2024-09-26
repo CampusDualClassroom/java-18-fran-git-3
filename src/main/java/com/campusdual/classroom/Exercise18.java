@@ -13,7 +13,7 @@ public class Exercise18 {
 		return array;
 	}
 
-	// Método para mostrar los elementos del array en una línea
+	// Método para mostrar los elementos del array en una línea .
 	public static void showInlineArray(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i]);
