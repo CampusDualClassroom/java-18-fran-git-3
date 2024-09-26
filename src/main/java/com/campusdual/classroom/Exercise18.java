@@ -4,37 +4,29 @@ import com.campusdual.util.Utils;
 
 public class Exercise18 {
 
-	public static void main(String[] args) {
-		// Suponiendo que queremos crear un array de 10 elementos
-		int size = 10;
-
-		// Llamamos al método para crear e inicializar el array
-		int[] array = createAndInitializeArray(size);
-
-		// Mostramos los valores del array en una sola línea
-		showInlineArray(array);
-	}
-
-	// Método para crear e inicializar un array de enteros con números naturales
-	public static int[] createAndInitializeArray(int size) {
-		int[] array = new int[size]; // Crear el array
-
-		// Inicializar el array con números naturales
-		for (int i = 0; i < size; i++) {
-			array[i] = i + 1; // Llenar el array con 1, 2, 3, ..., N
+	// Método para crear e inicializar un array con los primeros N números naturales
+	public static int[] createAndInitializeArray(int N) {
+		int[] array = new int[N];
+		for (int i = 0; i < N; i++) {
+			array[i] = i + 1; // Inicializa con los primeros N números naturales
 		}
-
-		return array; // Devolver el array inicializado
+		return array;
 	}
 
-	// Método para mostrar el array en una sola línea
+	// Método para mostrar los elementos del array en una línea
 	public static void showInlineArray(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i]);
 			if (i < array.length - 1) {
-				System.out.print(" "); // Espacio entre los números
+				System.out.print(" ");
 			}
 		}
-		System.out.println(); // Nueva línea al final
+		System.out.println();
+	}
+
+	public static void main(String[] args) {
+		int N = 10;
+		int[] array = createAndInitializeArray(N);
+		showInlineArray(array);
 	}
 }
